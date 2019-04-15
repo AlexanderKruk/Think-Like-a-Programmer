@@ -1,4 +1,5 @@
 #include <string>
+#include <iostream>
 using namespace std;
 
 class studentRecord {
@@ -49,6 +50,10 @@ int main() {
     s.addRecord(stu2);
     s.addRecord(stu1);
     s.removeRecord(4875);
+    studentRecord finded = s.recordWithNumber(2938);
+    cout << finded.grade() << "\n";
+    cout << finded.studentID() << "\n";
+    cout << finded.name() << "\n";
 }
 
 studentCollection::studentCollection(const studentCollection &original){
